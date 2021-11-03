@@ -130,3 +130,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+ALGORITHM = 'HS256'
+ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24
+
+
+GOOGLE_CLIENT_ID = "277942561195-l1cjv4qp10mpk3f63kfl2beqa0h0vmuj.apps.googleusercontent.com"

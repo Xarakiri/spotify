@@ -137,3 +137,25 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24
 
 
 GOOGLE_CLIENT_ID = "277942561195-l1cjv4qp10mpk3f63kfl2beqa0h0vmuj.apps.googleusercontent.com"
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('src.oauth.services.auth_backend.AuthBackend',),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
+
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    }
+}
+
+
